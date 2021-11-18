@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1>FizzBuzz問題</h1>
+
+  <div id="result"></div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <script>
+    // まずはconsoleに表示してみよう！
+    let FizzBuzz = $("#result")
+    for (i = 1; i <= 100; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        FizzBuzz = "FizzBuzz";
+      } else if (i % 3 === 0) {
+        FizzBuzz = "Fizz";
+      } else if (i % 5 === 0) {
+        FizzBuzz = "Buzz";
+      } else {
+        FizzBuzz = i
+      }
+      console.log(FizzBuzz);
+      document.getElementById("result").innerHTML += FizzBuzz + "<br>";
+    }
+
+
+  </script>
+
+</body>
+
+</html>
